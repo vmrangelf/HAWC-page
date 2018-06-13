@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Node C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/management.js"></script>
+  <script type="text/javascript" src="json/dataC.json"></script>
+  <style>
+    table {
+    border-collapse: collapse;
+    width: 40%;
+    }
+
+    th, td {
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+    background-color: #555;
+    color: white;
+    }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a  href="https://www.hawc-observatory.org/">
+        <img src="images/hawc-logo-small.jpg"
+             height="50" width="78">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-1 sidenav">
+      <p><a href="complete.html">Complete Layout</a></p>
+      <p><a href="nodeA.html">Node A</a></p>
+      <p><a href="nodeB.html">Node B</a></p>
+      <p><a href="nodeC.html">Node C</a></p>
+      <p><a href="nodeD.html">Node D</a></p>
+      <p><a href="nodeE.html">Node E</a></p>
+      <p><a href="nomenclature.html">Nomenclature</a></p>
+      <p><a href="changes.html">Layout's Modifications</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Node C</h1>
+      <p>
+        <div class="container">
+          <p></p>            
+          <img src="images/C.png" usemap="#cmap"> 
+          <map name="cmap">
+            <area shape="circle" coords="520,280,22" alt="node-c" coor = "10, 10" 
+                  href="javascript:get_data(nc)">
+             <!-- Junction 1 --> 
+             <area shape="circle" coords="113,176,15" alt="j1"
+                   href="javascript:get_data(j1)"
+                  title="North: 2101061 East: 677979">
+             <area shape="circle" coords="26,182,10" alt="1-1" coor = "10, 10"
+                   href="javascript:get_data(o78)">
+             <area shape="circle" coords="96,147,10" alt="1-2" coor = "10, 10"
+                   href="javascript:get_data(o77)">
+             <area shape="circle" coords="162,115,10" alt="1-3" coor = "10, 10"
+                   href="javascript:get_data(o76)">
+             <area shape="circle" coords="98,212,10" alt="1-4" coor = "10, 10"
+                   href="javascript:get_data(o611)">
+             <area shape="circle" coords="160,180,10" alt="1-5" coor = "10, 10"
+                   href="javascript:get_data(o610)">
+             <area shape="circle" coords="240,143,10" alt="1-6" coor = "10, 10"
+                   href="javascript:get_data(o69)">
+             <area shape="circle" coords="166,249,10" alt="1-7" coor = "10, 10"
+                   href="javascript:get_data(o510)">
+             <area shape="circle" coords="232,216,10" alt="1-8" coor = "10, 10"
+                   href="javascript:get_data(o59)">
+             <!-- Junction 2 --> 
+             <area shape="circle" coords="358,75,15" alt="j2"
+                   href="javascript:get_data(j2)"
+                  title="North: 2101122 East: 677965">
+             <area shape="circle" coords="267,69,10" alt="2-1" coor = "10, 10"
+                   href="javascript:get_data(o75)">
+             <area shape="circle" coords="375,35,10" alt="2-2" coor = "10, 10"
+                   href="javascript:get_data(o74)">
+             <area shape="circle" coords="325,114,10" alt="2-3" coor = "10, 10"
+                   href="javascript:get_data(o68)">
+             <area shape="circle" coords="426,86,10" alt="2-4" coor = "10, 10"
+                   href="javascript:get_data(o67)">
+             <area shape="circle" coords="482,64,10" alt="2-5" coor = "10, 10"
+                   href="javascript:get_data(o66)">
+             <area shape="circle" coords="312,182,10" alt="2-6" coor = "10, 10"
+                   href="javascript:get_data(o58)">
+             <area shape="circle" coords="397,154,10" alt="2-7" coor = "10, 10"
+                   href="javascript:get_data(o57)">
+             <area shape="circle" coords="472,137,10" alt="2-8" coor = "10, 10"
+                   href="javascript:get_data(o56)">                                    
+             <!-- Junction 3 --> 
+             <area shape="circle" coords="335,262,15" alt="j3"
+                   href="javascript:get_data(j3)"
+                  title="North: 2101095 East: 678013">
+             <area shape="circle" coords="221,295,10" alt="3-1" coor = "10, 10"
+                   href="javascript:get_data(o410)">
+             <area shape="circle" coords="287,263,10" alt="3-2" coor = "10, 10"
+                   href="javascript:get_data(o49)">
+             <area shape="circle" coords="366,233,10" alt="3-3" coor = "10, 10"
+                   href="javascript:get_data(o48)">
+             <area shape="circle" coords="220,353,10" alt="3-4" coor = "10, 10"
+                   href="javascript:get_data(o311)">
+             <area shape="circle" coords="266,328,10" alt="3-5" coor = "10, 10"
+                   href="javascript:get_data(o310)">
+             <area shape="circle" coords="324,312,10" alt="3-6" coor = "10, 10"
+                   href="javascript:get_data(o39)">
+             <area shape="circle" coords="401,286,10" alt="3-7" coor = "10, 10"
+                   href="javascript:get_data(o38)">
+             <!-- Junction 4 --> 
+             <area shape="circle" coords="349,382,15" alt="j4"
+                   href="javascript:get_data(j4)"
+                  title="North: 2101103 East: 678040">
+             <area shape="circle" coords="265,394,10" alt="4-1" coor = "10, 10"
+                   href="javascript:get_data(o210)">
+             <area shape="circle" coords="307,375,10" alt="4-2" coor = "10, 10"
+                   href="javascript:get_data(o29)">
+             <area shape="circle" coords="372,346,10" alt="4-3" coor = "10, 10"
+                   href="javascript:get_data(o28)">
+             <area shape="circle" coords="427,325,10" alt="4-4" coor = "10, 10"
+                   href="javascript:get_data(o27)">
+             <area shape="circle" coords="271,457,10" alt="4-5" coor = "10, 10"
+                   href="javascript:get_data(o110)">
+             <area shape="circle" coords="310,439,10" alt="4-6" coor = "10, 10"
+                   href="javascript:get_data(o19)">
+             <area shape="circle" coords="354,418,10" alt="4-7" coor = "10, 10"
+                   href="javascript:get_data(o18)">
+             <area shape="circle" coords="397,399,10" alt="4-8" coor = "10, 10"
+                   href="javascript:get_data(o17)">
+             <area shape="circle" coords="440,373,10" alt="4-9" coor = "10, 10"
+                   href="javascript:get_data(o16)">
+             <!-- Junction 5 --> 
+             <area shape="circle" coords="474,219,15" alt="j5"
+                   href="javascript:get_data(j5)"
+                  title="North: 2101141 East:678015">
+             <area shape="circle" coords="425,212,10" alt="5-1" coor = "10, 10"
+                   href="javascript:get_data(o47)">
+             <area shape="circle" coords="481,186,10" alt="5-2" coor = "10, 10"
+                   href="javascript:get_data(o46)">
+             <area shape="circle" coords="450,256,10" alt="5-3" coor = "10, 10"
+                   href="javascript:get_data(o37)">
+             <area shape="circle" coords="508,236,10" alt="5-4" coor = "10, 10"
+                   href="javascript:get_data(o36)">
+             <area shape="circle" coords="470,305,10" alt="5-5" coor = "10, 10"
+                   href="javascript:get_data(o26)">
+             <area shape="circle" coords="484,347,10" alt="5-6" coor = "10, 10"
+                   href="javascript:get_data(o15)">
+             <area shape="circle" coords="526,326,10" alt="5-7" coor = "10, 10"
+                   href="javascript:get_data(o25)">            
+             <!-- Junction 6 --> 
+             <area shape="circle" coords="626,368,15" alt="j6"
+                   href="javascript:get_data(j6)"
+                  title="North: 2101258 East: 678106">
+             <area shape="circle" coords="579,275,10" alt="6-1" coor = "10, 10"
+                   href="javascript:get_data(o24)">
+             <area shape="circle" coords="566,359,10" alt="6-2" coor = "10, 10"
+                   href="javascript:get_data(o13)">
+             <area shape="circle" coords="611,326,10" alt="6-3" coor = "10, 10"
+                   href="javascript:get_data(o23)">
+             <area shape="circle" coords="612,404,10" alt="6-4" coor = "10, 10"
+                   href="javascript:get_data(o12)">
+             <area shape="circle" coords="655,372,10" alt="6-5" coor = "10, 10"
+                   href="javascript:get_data(o22)">
+             <area shape="circle" coords="631,445,10" alt="6-6" coor = "10, 10"
+                   href="javascript:get_data(o11)">
+             <area shape="circle" coords="687,417,10" alt="6-7" coor = "10, 10"
+                   href="javascript:get_data(o21)">
+             <!-- Junction 7 --> 
+             <area shape="circle" coords="822,154,15" alt="j7"
+                   href="javascript:get_data(j7)"
+                  title="North: 2101222 East: 678005">
+             <area shape="circle" coords="764,56,10" alt="7-1" coor = "10, 10"
+                   href="javascript:get_data(o73)">
+             <area shape="circle" coords="766,138,10" alt="7-2" coor = "10, 10"
+                   href="javascript:get_data(o63)">
+             <area shape="circle" coords="838,120,10" alt="7-3" coor = "10, 10"
+                   href="javascript:get_data(o72)">
+             <area shape="circle" coords="748,201,10" alt="7-4" coor = "10, 10"
+                   href="javascript:get_data(o52)">
+             <area shape="circle" coords="821,201,10" alt="7-5" coor = "10, 10"
+                   href="javascript:get_data(o62)">
+             <area shape="circle" coords="885,198,10" alt="7-6" coor = "10, 10"
+                   href="javascript:get_data(o71)">
+             <area shape="circle" coords="862,284,10" alt="7-7" coor = "10, 10"
+                   href="javascript:get_data(o61)">
+            <!-- Junction 8 --> 
+            <area shape="circle" coords="743,328,15" alt="j8"
+                  href="javascript:get_data(j8)"
+                  title="North: 2101207 East: 678040">
+            <area shape="circle" coords="665,296,10" alt="8-1" coor = "10, 10"
+                  href="javascript:get_data(o33)">
+            <area shape="circle" coords="739,291,10" alt="8-2" coor = "10, 10"
+                  href="javascript:get_data(o42)">
+            <area shape="circle" coords="791,275,10" alt="8-3" coor = "10, 10"
+                  href="javascript:get_data(o51)">
+            <area shape="circle" coords="709,343,10" alt="8-4" coor = "10, 10"
+                  href="javascript:get_data(o32)">
+            <area shape="circle" coords="737,401,10" alt="8-5" coor = "10, 10"
+                  href="javascript:get_data(o31)">
+            <area shape="circle" coords="779,367,10" alt="8-6" coor = "10, 10"
+                  href="javascript:get_data(o41)">
+             <!-- Junction 9 --> 
+             <area shape="circle" coords="623,221,15" alt="j9"
+                   href="javascript:get_data(j9)"
+                  title="North: 2101173 East: 678010">
+             <area shape="circle" coords="551,169,10" alt="9-1" coor = "10, 10"
+                   href="javascript:get_data(o45)">
+             <area shape="circle" coords="577,223,10" alt="9-2" coor = "10, 10"
+                   href="javascript:get_data(o35)">
+             <area shape="circle" coords="631,188,10" alt="9-3" coor = "10, 10"
+                   href="javascript:get_data(o44)">
+             <area shape="circle" coords="646,253,10" alt="9-4" coor = "10, 10"
+                   href="javascript:get_data(o34)">
+             <area shape="circle" coords="699,233,10" alt="9-5" coor = "10, 10"
+                   href="javascript:get_data(o43)">
+             <!-- Junction 10 --> 
+             <area shape="circle" coords="631,38,15" alt="j10"
+                   href="javascript:get_data(j10)"
+                  title="North: 2101181 East: 677979">
+             <area shape="circle" coords="566,53,10" alt="10-1" coor = "10, 10"
+                   href="javascript:get_data(o65)">
+             <area shape="circle" coords="679,77,10" alt="10-2" coor = "10, 10"
+                   href="javascript:get_data(o64)">
+             <area shape="circle" coords="527,111,10" alt="10-3" coor = "10, 10"
+                   href="javascript:get_data(o55)">
+             <area shape="circle" coords="619,113,10" alt="10-4" coor = "10, 10"
+                   href="javascript:get_data(o54)">
+             <area shape="circle" coords="690,149,10" alt="10-5" coor = "10, 10"
+                   href="javascript:get_data(o53)">
+            <!-- Y's -->
+            <area shape="circle" coords="676,337,7" alt="y-1" coor = "7, 7"
+                  href="javascript:get_data(y1)">
+            <area shape="circle" coords="625,155,7" alt="y-2" coor = "7, 7"
+                  href="javascript:get_data(y2)">
+            <area shape="circle" coords="593,183,7" alt="y-3" coor = "7, 7"
+                  href="javascript:get_data(y3)">
+            <area shape="circle" coords="358,185,7" alt="y-4" coor = "7, 7"
+                  href="javascript:get_data(y4)">
+            <area shape="circle" coords="420,300,7" alt="y-5" coor = "7, 7"
+                  href="javascript:get_data(y5)">
+            <area shape="circle" coords="456,240,7" alt="y-6" coor = "7, 7"
+                  href="javascript:get_data(y6)">
+        </map>
+      <!--</div>-->
+      </p>
+      <hr>
+      <div id="title"></div>
+      <div id="data"></div>
+      <p>&nbsp;</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer">
+		<div class="container-fluid text-center">
+      <p>HAWC</p>
+			<ul class="copyright">
+				<li>&copy; All rights reserved to 
+          <a href="http://www.cic.ipn.mx/">Centro de Investigación en Computación</a>,
+          <a href="http://www.ipn.mx/Paginas/inicio.aspx">Instituto Politécnico Nacional</a>
+        </li>
+         <li>
+           &copy;
+           <a href="http://www.udg.mx/">Universidad de Guadalajara</a>
+        </li> 
+        <li>
+          &copy; 2011-2018, the HAWC Collaboration
+        </li>
+				<li>Design: <a href="https://startbootstrap.com/template-categories/all/">TEMPLATED</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+</html>
+
